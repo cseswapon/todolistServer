@@ -7,10 +7,7 @@
     }
   ],
   "routes": [
-    {
-      "src": "/api/(.*)",
-      "dest": "index.js"
-    }
-  ],
-  "rewrites": [{ "source": "/api/(.*)", "destination": "/api/404.js" }]
+    { "handle": "filesystem" },
+    { "src": "/(.*)", "status": 404, "dest": "index.js" }
+  ]
 }
